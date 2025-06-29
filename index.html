@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,24 +19,34 @@
     }
 
     body.light {
-      background-color: var(--bg-light);
+      background: url('Page_background.png') no-repeat top center;
+      background-size: cover;
       color: var(--text-light);
     }
 
     body.dark {
-      background-color: var(--bg-dark);
+      background: #0b0b0b;
       color: var(--text-dark);
     }
 
     header {
-      background: url('top_banner_center.png') center/cover no-repeat;
+      background: url('top_banner_center.png') no-repeat center top;
+      background-size: contain;
+      background-color: #000;
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        background-size: 100% auto;
+        padding: 30px 15px;
+      }
     }
 
     header h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
     }
 
     nav {
@@ -54,54 +63,15 @@
       padding: 30px 15px;
       max-width: 800px;
       margin: auto;
-    }
-
-    .wallet-input {
-      display: block;
-      margin: 20px auto;
-      padding: 10px;
-      width: 100%;
-      max-width: 500px;
-    }
-
-    .paypal-section {
-      text-align: center;
-    }
-
-    .paypal-tier {
-      margin: 15px 0;
-    }
-
-    .nft-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .nft-card {
-      margin: 10px;
-      width: 200px;
-      background: #111;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .nft-card img {
-      width: 100%;
-      display: block;
-    }
-
-    .nft-card p {
-      margin: 0;
-      padding: 10px;
-      font-size: 0.9rem;
-      background: #222;
-      color: #f1f1f1;
+      background: rgba(255,255,255,0.85);
+      border-radius: 10px;
+      margin-bottom: 30px;
     }
 
     .chart {
       width: 100%;
       margin: 20px 0;
+      border-radius: 10px;
     }
 
     footer {
@@ -146,56 +116,27 @@
   <section>
     <h2>🧠 How to Setup a Wallet & Trade on the DEX</h2>
     <iframe width="100%" height="315" src="https://www.youtube.com/embed/6Jo_3AXNXqs" title="XUMM Wallet + DEX Tutorial" frameborder="0" allowfullscreen></iframe>
-  </section>
-
-  <section>
-    <h2>🪙 Buy TARBIX Tokens</h2>
-    <p>Input your XRPL wallet address (starting with “r”) before checkout.</p>
-    <input type="text" id="walletAddress" class="wallet-input" placeholder="Your XRPL Wallet Address">
-
-    <div class="paypal-section">
-      <div class="paypal-tier">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_xclick">
-          <input type="hidden" name="business" value="marketpulse.ai.llc@gmail.com">
-          <input type="hidden" name="currency_code" value="USD">
-          <input type="hidden" name="item_name" value="TARBIX Token Purchase - $5 Tier">
-          <input type="hidden" name="amount" value="5.00">
-          <input type="hidden" name="custom" id="paypalWallet">
-          <input type="submit" value="Buy $5 Tier">
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>🎴 NFT Alpha: The Veil Cards</h2>
-    <div class="nft-grid">
-      <div class="nft-card">
-        <img src="card1.png" alt="Origin">
-        <p>Card #1: Origin — $5 — 1,000 minted</p>
-      </div>
-      <div class="nft-card">
-        <img src="card2.png" alt="Reflection">
-        <p>Card #2: Reflection — $5 — 1,000 minted</p>
-      </div>
-      <div class="nft-card">
-        <img src="card3.png" alt="Consequence">
-        <p>Card #3: Consequence — $5 — 1,000 minted</p>
-      </div>
-    </div>
+    <p style="margin-top: 15px;">
+      To buy TARBIX tokens directly:
+      <ul>
+        <li>Open the <strong>XUMM Wallet</strong> and connect to the DEX.</li>
+        <li>Search for: <code>TARBIX</code> (Token ID coming soon).</li>
+        <li>Ensure you're trading on the correct network (XRPL Mainnet).</li>
+        <li>If TARBIX doesn’t show up, add the token manually using the trustline instructions in the video.</li>
+      </ul>
+    </p>
   </section>
 
   <section>
     <h2>📊 Market Charts & System Visuals</h2>
-    <img src="chart_1.png" class="chart">
-    <img src="chart_2.png" class="chart">
-    <img src="chart_3.png" class="chart">
-    <img src="chart_4.png" class="chart">
-    <img src="chart_5.png" class="chart">
-    <img src="chart_6.png" class="chart">
-    <img src="chart_7.png" class="chart">
-    <img src="diagram.png" class="chart">
+    <img src="chart_1.png" class="chart" alt="Chart 1">
+    <img src="chart_2.png" class="chart" alt="Chart 2">
+    <img src="chart_3.png" class="chart" alt="Chart 3">
+    <img src="chart_4.png" class="chart" alt="Chart 4">
+    <img src="chart_5.png" class="chart" alt="Chart 5">
+    <img src="chart_6.png" class="chart" alt="Chart 6">
+    <img src="chart_7.png" class="chart" alt="Chart 7">
+    <img src="diagram.png" class="chart" alt="System Diagram">
   </section>
 
   <section>
@@ -211,7 +152,9 @@
   <footer>
     <p>Contact: <a href="mailto:verify@unshyft.com">verify@unshyft.com</a></p>
     <p>© 2025 TARBIX / MarketPulse AI LLC / REFΛΞCT</p>
-    <div class="disclaimer">This website is for informational and symbolic purposes only. It does not constitute legal, investment, or financial advice. Use at your own discretion. All purchases are voluntary and final.</div>
+    <div class="disclaimer">
+      This website is for informational and symbolic purposes only. It does not constitute legal, investment, or financial advice. Use at your own discretion. All purchases are voluntary and final.
+    </div>
   </footer>
 
   <script>
@@ -229,10 +172,6 @@
       document.getElementById('title').innerText = text[lang].title;
       document.getElementById('tagline').innerText = text[lang].tagline;
     }
-
-    document.getElementById('walletAddress').addEventListener('input', function () {
-      document.getElementById('paypalWallet').value = this.value;
-    });
   </script>
 
 </body>
