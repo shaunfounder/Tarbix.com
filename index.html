@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +30,7 @@
     }
 
     header {
-      background: url("assets/banner.jpg") center/cover no-repeat;
+      background: url('top_banner_center.png') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 80px 20px;
@@ -98,6 +99,11 @@
       color: #f1f1f1;
     }
 
+    .chart {
+      width: 100%;
+      margin: 20px 0;
+    }
+
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -107,6 +113,12 @@
     a {
       color: #66ccff;
       text-decoration: none;
+    }
+
+    .disclaimer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #888;
     }
   </style>
 </head>
@@ -127,15 +139,19 @@
   </header>
 
   <section>
-    <h2>🎥 Get Your XRPL Wallet (XUMM)</h2>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/o3eP1zaWwms"
-            title="XUMM Wallet Setup" frameborder="0" allowfullscreen></iframe>
-    <p><a href="https://xumm.app/" target="_blank">➡️ Click here to get the XUMM Wallet</a></p>
+    <h2>🎥 What is TARBIX?</h2>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/o3eP1zaWwms" title="TARBIX Overview" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section>
+    <h2>🧠 How to Setup a Wallet & Trade on the DEX</h2>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/6Jo_3AXNXqs" title="XUMM Wallet + DEX Tutorial" frameborder="0" allowfullscreen></iframe>
   </section>
 
   <section>
     <h2>🪙 Buy TARBIX Tokens</h2>
-    <input type="text" id="walletAddress" class="wallet-input" placeholder="Your XRPL Wallet Address (starts with r...)">
+    <p>Input your XRPL wallet address (starting with “r”) before checkout.</p>
+    <input type="text" id="walletAddress" class="wallet-input" placeholder="Your XRPL Wallet Address">
 
     <div class="paypal-section">
       <div class="paypal-tier">
@@ -149,7 +165,6 @@
           <input type="submit" value="Buy $5 Tier">
         </form>
       </div>
-      <!-- You can copy this block and change "amount" and "item_name" for $10, $25, $50, $100, etc. -->
     </div>
   </section>
 
@@ -157,33 +172,46 @@
     <h2>🎴 NFT Alpha: The Veil Cards</h2>
     <div class="nft-grid">
       <div class="nft-card">
-        <img src="assets/card1.png" alt="Origin">
+        <img src="card1.png" alt="Origin">
         <p>Card #1: Origin — $5 — 1,000 minted</p>
       </div>
       <div class="nft-card">
-        <img src="assets/card2.png" alt="Reflection">
+        <img src="card2.png" alt="Reflection">
         <p>Card #2: Reflection — $5 — 1,000 minted</p>
       </div>
       <div class="nft-card">
-        <img src="assets/card3.png" alt="Consequence">
+        <img src="card3.png" alt="Consequence">
         <p>Card #3: Consequence — $5 — 1,000 minted</p>
       </div>
     </div>
   </section>
 
   <section>
+    <h2>📊 Market Charts & System Visuals</h2>
+    <img src="chart_1.png" class="chart">
+    <img src="chart_2.png" class="chart">
+    <img src="chart_3.png" class="chart">
+    <img src="chart_4.png" class="chart">
+    <img src="chart_5.png" class="chart">
+    <img src="chart_6.png" class="chart">
+    <img src="chart_7.png" class="chart">
+    <img src="diagram.png" class="chart">
+  </section>
+
+  <section>
     <h2>📄 Documents & Disclosures</h2>
     <ul>
-      <li><a href="docs/tarbix_coin_whitepaper.pdf" target="_blank">TARBIX Whitepaper</a></li>
-      <li><a href="docs/token_access_trust_utility_disclosure.pdf" target="_blank">Token Access Trust Disclosure</a></li>
-      <li><a href="docs/refund_logic_graduation_vault_overview.pdf" target="_blank">Refund Vault Overview</a></li>
-      <li><a href="docs/privacy_law_compliance_statement.pdf" target="_blank">Privacy Compliance Statement</a></li>
+      <li><a href="tarbix_coin_whitepaper.pdf" target="_blank">TARBIX Whitepaper</a></li>
+      <li><a href="token_access_trust_utility_disclosure.pdf" target="_blank">Token Access Trust Disclosure</a></li>
+      <li><a href="refund_logic_graduation_vault_overview.pdf" target="_blank">Refund Vault Overview</a></li>
+      <li><a href="privacy_law_compliance_statement.pdf" target="_blank">Privacy Compliance Statement</a></li>
     </ul>
   </section>
 
   <footer>
     <p>Contact: <a href="mailto:verify@unshyft.com">verify@unshyft.com</a></p>
     <p>© 2025 TARBIX / MarketPulse AI LLC / REFΛΞCT</p>
+    <div class="disclaimer">This website is for informational and symbolic purposes only. It does not constitute legal, investment, or financial advice. Use at your own discretion. All purchases are voluntary and final.</div>
   </footer>
 
   <script>
@@ -209,4 +237,3 @@
 
 </body>
 </html>
-
